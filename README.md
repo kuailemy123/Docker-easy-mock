@@ -109,7 +109,7 @@ services:
       - easy-mongodb
       - easy-redis
     environment:
-      - MONGODB=mongodb
-      - REDIS_HOST=redis
+      - MONGODB=easy-mongodb
+      - REDIS_HOST=easy-redis
     restart: always
 ```
