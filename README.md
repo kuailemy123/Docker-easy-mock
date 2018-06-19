@@ -105,6 +105,8 @@ services:
     hostname: easy-mock
     image: lework/easy-mock:1.6.0
     network_mode: test
+    ports:
+      - '7300:7300'
     depends_on:
       - easy-mongodb
       - easy-redis
