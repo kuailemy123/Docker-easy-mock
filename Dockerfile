@@ -14,9 +14,8 @@ RUN apk --update -t --no-cache add tzdata && \
     apk --no-cache --virtual .fetch-deps add gnupg ca-certificates openssl && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone && \
-    cd /tmp/ && \
-    wget -O easy-mock.tar.gz  http://github.com/easy-mock/easy-mock/archive/v${MOCK_VERSION}.tar.gz && \
-    tar -xvf easy-mock.tar.gz -C /usr/local/ && \
+    wget -O /tmp/easy-mock.tar.gz  http://github.com/easy-mock/easy-mock/archive/v${MOCK_VERSION}.tar.gz && \
+    tar -xvf /tmp/easy-mock.tar.gz -C /usr/local/ && \
     cd /usr/local/easy-mock-${MOCK_VERSION}/ && \
     yarn install && \
     ln -s /usr/local/easy-mock-${MOCK_VERSION} /usr/local/easy-mock && \
