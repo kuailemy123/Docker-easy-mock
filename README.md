@@ -80,7 +80,7 @@ docker run -tid --name easy-mock --restart=always -p 7300:7300 -e MONGODB=192.16
 
 docker-compose
 ```bash
-version: '2'
+version: '3'
 services:
   easy-redis:
     container_name: easy-redis
@@ -98,7 +98,7 @@ services:
     image: mongo:3.6.5-jessie
     network_mode: test
     volumes:
-      - "/easymock/mongodb:/data"
+      - "/easymock/mongodb:/data/db"
     restart: always
     
   easy-mock:
