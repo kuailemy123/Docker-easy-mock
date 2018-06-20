@@ -86,6 +86,7 @@ services:
     container_name: easy-redis
     hostname: easy-redis
     image: redis:4.0-alpine
+    command: redis-server --appendonly yes
     network_mode: test
     volumes:
       - "/easymock/redis:/data"
